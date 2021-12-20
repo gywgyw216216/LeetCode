@@ -1,6 +1,9 @@
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result = new ListNode();
+        
+        result.next = null;
+        
         ListNode p = result;
         ListNode pl1 = l1;
         ListNode pl2 = l2;
