@@ -3,7 +3,7 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> result(2);
         unordered_map<int, unsigned short> number;
-        const unsigned short length = nums.size();
+        const unsigned short length = (unsigned short)nums.size();
 
         for(unsigned short i = 0; i < length; i++)
         {
