@@ -9,11 +9,11 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
 
     while(pl1 || pl2 || carry)
     {
-        unsigned short usL1 = pl1 ? pl1->val : 0;
-        unsigned short usL2 = pl2 ? pl2->val : 0;
-        unsigned short value = usL1 + usL2 + carry;
+        unsigned short usL1 = pl1 ? (unsigned short)pl1->val : (unsigned short)0;
+        unsigned short usL2 = pl2 ? (unsigned short)pl2->val : (unsigned short)0;
+        unsigned short value = (unsigned short)(usL1 + usL2 + carry);
 
-        carry = value / 10;
+        carry = (unsigned short)(value / 10);
         value %= 10;
 
         p->next = (struct ListNode*)malloc(sizeof(struct ListNode));
