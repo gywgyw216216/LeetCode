@@ -17,26 +17,26 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
 
         if(pl1)
         {
-            usL1 = pl1->val;
+            usL1 = (unsigned short)pl1->val;
             pl1 = pl1->next;
         }
 
         if(pl2)
         {
-            usL2 = pl2->val;
+            usL2 = (unsigned short)pl2->val;
             pl2 = pl2->next;
         }
 
         if(usL1 == 10 && usL2 < 10)
-            value = usL2 + carry;
+            value = (unsigned short)(usL2 + carry);
         else if(usL2 == 10 && usL1 < 10)
-            value = usL1 + carry;
+            value = (unsigned short)(usL1 + carry);
         else if(usL1 == 10 && usL2 == 10)
             value = carry;
         else
-            value = usL1 + usL2 + carry;
+            value = (unsigned short)(usL1 + usL2 + carry);
 
-        carry = value / 10;
+        carry = (unsigned short)(value / 10);
         value %= 10;
         p->val = value;
 
