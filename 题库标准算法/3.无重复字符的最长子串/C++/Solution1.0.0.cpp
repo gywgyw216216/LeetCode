@@ -23,10 +23,7 @@ public:
                 while(j < length)
                 {
                     if(str.find(s[j]) == str.npos)
-                    {
-                        str += s[j];
-                        j++;
-                    }
+                        str += s[j++];
                     else
                     {
                         result = max((unsigned short)(j - i), result);
