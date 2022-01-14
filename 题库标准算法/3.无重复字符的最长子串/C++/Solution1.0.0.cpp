@@ -32,8 +32,7 @@ public:
                     if(j - i > result)
                         result = (unsigned short)(j - i);
 
-                    i++;
-                    str = s[i];
+                    str = s[++i];
                     j = (unsigned short)(i + 1);
                 }
             }
